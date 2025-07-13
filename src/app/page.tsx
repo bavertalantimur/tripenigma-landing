@@ -22,7 +22,7 @@ export default function Home() {
     <main className="min-h-screen flex flex-col items-center justify-center gap-8 px-4">
       <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-2 sm:mb-4 text-center">Welcome to Tripenigma</h1>
       <p className="text-base sm:text-lg md:text-xl text-center text-gray-600 mb-2 sm:mb-4 max-w-xl">
-        Discover more, stress less. Get the TripEnigma app today and simplify your travel plans!
+        Discoverr more, stress less. Get the TripEnigma app today and simplify your travel plans!
       </p>
       <div className="flex flex-col sm:flex-row gap-4 w-full max-w-xs sm:max-w-none sm:w-auto items-center justify-center">
         {os === "android" && (
