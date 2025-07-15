@@ -7,7 +7,7 @@ export const metadata = { title: 'Tripenigma' };
 
 export default async function LocaleLayout(props: {
     children: React.ReactNode;
-    params: { locale: string };
+    params: Promise<{ locale: string }>;
 }) {
     const { children, params } = props;
     const { locale } = await params;
@@ -15,12 +15,8 @@ export default async function LocaleLayout(props: {
     const { messages } = await requestConfig({ requestLocale: Promise.resolve(locale) });
 
     return (
-        <html lang={locale}>
-            <body>
-                <NextIntlClientProvider locale={locale} messages={messages}>
-                    {children}
-                </NextIntlClientProvider>
-            </body>
-        </html>
+        <NextIntlClientProvider locale={locale} messages={messages}>
+            {children}
+        </NextIntlClientProvider>
     );
 }
