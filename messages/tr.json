@@ -1,8 +1,10 @@
 {
   "Home": {
-    "title": "TripEnigma ile Tarihi Eserleri Keşfet",
-    "tagline": "Fotoğrafını yükle, yapay zekamız üzerindeki yazıları çözsün ve eser hakkında bilgi versin.",
-    "downloadAndroid": "Android için indir",
-    "downloadIos": "iOS için indir"
+    "title": "TripEnigma: Yapay Zeka Destekli Tarihi Keşif",
+    "tagline": "Akıllı telefonunuzu TripEnigma ile güçlü bir tarihi keşif aracına dönüştürün. Herhangi bir tarihi anıt, antik yazı veya tarihi sitenin fotoğrafını çekin ve gelişmiş yapay zeka teknolojimizin antik yazıları çevirmesine ve arkalarındaki büyüleyici hikayeleri ortaya çıkarmasına izin verin.",
+    "downloadAndroid": "GOOGLE PLAY'DEN",
+    "downloadAndroidBold": "İNDİR",
+    "downloadIos": "APP STORE'DAN",
+    "downloadIosBold": "İNDİR"
   }
 }

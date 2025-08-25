@@ -1,8 +1,10 @@
 {
   "Home": {
-    "title": "Explorez les artefacts historiques avec TripEnigma",
-    "tagline": "Téléchargez une photo, laissez notre IA décrypter les inscriptions et vous fournir des informations sur l'objet.",
-    "downloadAndroid": "Télécharger pour Android",
-    "downloadIos": "Télécharger pour iOS"
+    "title": "TripEnigma : Découverte Historique Propulsée par l'IA",
+    "tagline": "Transformez votre smartphone en un puissant outil d'exploration historique avec TripEnigma. Prenez simplement une photo de n'importe quel monument historique, script ancien ou site historique, et laissez notre technologie IA avancée traduire les scripts anciens et révéler les fascinantes histoires qui se cachent derrière eux.",
+    "downloadAndroid": "OBTENIR SUR",
+    "downloadAndroidBold": "GOOGLE PLAY",
+    "downloadIos": "Télécharger sur",
+    "downloadIosBold": "App Store"
   }
 }

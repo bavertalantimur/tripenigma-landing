@@ -15,36 +15,56 @@ export default function Home() {
     }, []);
 
     return (
-        <main className="min-h-screen flex items-center justify-center bg-gradient-to-b from-white to-gray-100 px-4 sm:px-6 md:px-8">
-            <div className="max-w-2xl w-full text-center py-12 sm:py-16 md:py-24 space-y-8">
-                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight">
-                    {t('title')}
-                </h1>
+        <main className="min-h-screen flex items-center justify-center bg-white px-4 sm:px-6 md:px-8">
+            <div className="max-w-5xl w-full text-center py-0 sm:py-4 md:py-8 space-y-8">
+                <div className="space-y-6">
+                    <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-black leading-tight tracking-tight">
+                        {t('title')}
+                    </h1>
 
-                <p className="text-base xs:text-lg sm:text-xl md:text-2xl text-gray-600 max-w-xl mx-auto">
-                    {t('tagline')}
-                </p>
+                    <p className="text-sm xs:text-base sm:text-lg md:text-xl lg:text-2xl text-gray-800 max-w-4xl mx-auto leading-relaxed font-normal text-left">
+                        {t('tagline')}
+                    </p>
+                </div>
 
-                <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-6">
+                <div className="flex flex-col justify-center items-center gap-2 mt-4">
                     {(os === 'android' || os === 'other') && (
-                        <a
-                            href="https://play.google.com/store/apps/details?id=com.tripenigma.app"
-                            className="flex items-center gap-2 px-5 py-3 sm:px-7 sm:py-4 bg-black text-white rounded-lg shadow hover:bg-gray-800 transition text-base sm:text-lg font-semibold w-full sm:w-auto justify-center"
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            <img src="/playstore.svg" className="w-6 h-6" alt="Play Store" />
-                            {t('downloadAndroid')}
-                        </a>
+                        <div className="w-full sm:w-auto relative">
+                            <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3 sm:py-1 md:px-3 md:py-1 bg-white text-black border-[3px] border-black rounded-[14px] transition text-sm font-semibold w-full sm:w-64 md:w-72 justify-start pl-4 sm:pl-5 md:pl-6">
+                                <div className="flex items-center gap-2 px-1 h-12 sm:h-14 md:h-16">
+                                    <img src="/playstore.svg" className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="Play Store" />
+                                    <div className="flex flex-col items-start leading-tight">
+                                        <span className="font-normal text-xs sm:text-sm md:text-base uppercase text-gray-500">{t('downloadAndroid')}</span>
+                                        <span className="font-bold text-lg sm:text-xl md:text-2xl uppercase">{t('downloadAndroidBold')}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a
+                                href="https://play.google.com/store/apps/details?id=com.tripenigma.app"
+                                target="_blank" rel="noopener noreferrer"
+                                className="absolute inset-0"
+                            >
+                            </a>
+                        </div>
                     )}
                     {(os === 'ios' || os === 'other') && (
-                        <a
-                            href="https://apps.apple.com/app/tripenigma/id[APP_ID]"
-                            className="flex items-center gap-2 px-5 py-3 sm:px-7 sm:py-4 bg-black text-white rounded-lg shadow hover:bg-gray-800 transition text-base sm:text-lg font-semibold w-full sm:w-auto justify-center"
-                            target="_blank" rel="noopener noreferrer"
-                        >
-                            <img src="/apple.svg" className="w-6 h-6" alt="App Store" />
-                            {t('downloadIos')}
-                        </a>
+                        <div className="w-full sm:w-auto relative">
+                            <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3 sm:py-1 md:px-3 md:py-1 bg-white text-black border-[3px] border-black rounded-[14px] transition text-sm font-semibold w-full sm:w-64 md:w-72 justify-start pl-4 sm:pl-5 md:pl-6">
+                                <div className="flex items-center gap-2 px-1 h-12 sm:h-14 md:h-16">
+                                    <img src="/apple.svg" className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="App Store" />
+                                    <div className="flex flex-col items-start leading-tight">
+                                        <span className="font-normal text-xs sm:text-sm md:text-base uppercase text-gray-500">{t('downloadIos')}</span>
+                                        <span className="font-bold text-lg sm:text-xl md:text-2xl uppercase">{t('downloadIosBold')}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a
+                                href="https://apps.apple.com/app/tripenigma/id[APP_ID]"
+                                target="_blank" rel="noopener noreferrer"
+                                className="absolute inset-0"
+                            >
+                            </a>
+                        </div>
                     )}
                 </div>
             </div>
