@@ -1,27 +1,21 @@
 'use client';
 
-import { useEffect, useState } from 'react';
 import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 
 export default function Home() {
     const t = useTranslations('Home');
-    const [os, setOs] = useState<'android' | 'ios' | 'other' | null>(null);
-
-    useEffect(() => {
-        const ua = navigator.userAgent;
-        if (/iPad|iPhone|iPod/.test(ua)) setOs('ios');
-        else if (/Android/.test(ua)) setOs('android');
-        else setOs('other');
-    }, []);
 
     return (
         <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-500 to-purple-600 px-4 sm:px-6 md:px-8">
             <div className="max-w-5xl w-full text-center py-0 sm:py-6 md:py-10 space-y-8">
                 <div className="space-y-4 text-white">
                     <div className="flex justify-center mb-6">
-                        <img 
+                        <Image 
                             src="/logo.png" 
                             alt="TripEnigma Logo" 
+                            width={224}
+                            height={224}
                             className="w-28 h-28 sm:w-40 sm:h-40 md:w-48 md:h-48 lg:w-56 lg:h-56 object-contain bg-white rounded-full p-2 shadow-lg"
                         />
                     </div>
@@ -40,7 +34,7 @@ export default function Home() {
                     <div className="w-full sm:w-auto relative">
                         <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3 sm:py-1 md:px-3 md:py-1 bg-white text-black border-[3px] border-black rounded-[14px] transition motion-reduce:transition-none text-sm font-semibold w-full sm:w-64 md:w-72 justify-start pl-4 sm:pl-5 md:pl-6">
                             <div className="flex items-center gap-2 px-1 h-12 sm:h-14 md:h-16">
-                                <img src="/apple.svg" className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="App Store" />
+                                <Image src="/apple.svg" width={40} height={40} className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="App Store" />
                                 <div className="flex flex-col items-start leading-tight">
                                     <span className="font-normal text-xs sm:text-sm md:text-base uppercase text-gray-500">{t('downloadIos')}</span>
                                     <span className="font-bold text-lg sm:text-xl md:text-2xl uppercase">{t('downloadIosBold')}</span>
@@ -57,7 +51,7 @@ export default function Home() {
                     <div className="w-full sm:w-auto relative">
                         <div className="flex items-center gap-1.5 px-3 py-1 sm:px-3 sm:py-1 md:px-3 md:py-1 bg-white text-black border-[3px] border-black rounded-[14px] transition motion-reduce:transition-none text-sm font-semibold w-full sm:w-64 md:w-72 justify-start pl-4 sm:pl-5 md:pl-6">
                             <div className="flex items-center gap-2 px-1 h-12 sm:h-14 md:h-16">
-                                <img src="/playstore.svg" className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="Play Store" />
+                                <Image src="/playstore.svg" width={40} height={40} className="w-9 h-9 sm:w-10 sm:h-10 md:w-10 md:h-10" alt="Play Store" />
                                 <div className="flex flex-col items-start leading-tight">
                                     <span className="font-normal text-xs sm:text-sm md:text-base uppercase text-gray-500">{t('downloadAndroid')}</span>
                                     <span className="font-bold text-lg sm:text-xl md:text-2xl uppercase">{t('downloadAndroidBold')}</span>
